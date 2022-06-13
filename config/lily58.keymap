@@ -21,14 +21,14 @@
                 |   TAB  |   Q  |   W  |   E   |   R   |   T   |                    |   Y   |   U    |   I    |   O   |    P   |    -   |
                 |   CTRL |   A  |   S  |   D   |   F   |   G   |                    |   H   |   J    |   K    |   L   |    ;   |    '   |
                 |   SHIFT|   Z  |   X  |   C   |   V   |   B   |   "["  |   |  "]"  |   N   |   M    |   ,    |   .   |    /   |  SHIFT |
-                                       |  ALT  |  GUI  | BSPC |RAISE/SPACE|SPACE/RAISE|  ENTER |  GUI   |  ALT  |
+                                       |  ALT  |  GUI  | RAISE/SPACE | BSPC | ENTER |  SPACE/RAISE |  GUI   |  ALT  |
             */
 			bindings = <
 				&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                                   &kp N6  &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
 				&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                                    &kp Y   &kp U    &kp I     &kp O   &kp P    &kp MINUS
 				&kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                                    &kp H   &kp J    &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B    &kp LBKT        &kp RBKT        &kp N   &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-										&kp LALT &kp LGUI &kp BSPC &lt RAISE SPACE &lt RAISE SPACE &kp RET &kp RGUI &kp RALT
+										&kp LALT &kp LGUI &lt RAISE SPACE &kp BSPC &kp RET &lt RAISE SPACE &kp RGUI &kp RALT
 			>;
 		};
 
@@ -39,14 +39,14 @@
 			   |       |       |       |      |      |      |                   |      |       |       |       |       |       |
 			   |       |       |       |      |      |      |                   |     |      |      |      |       |       |
 			   |       |       |       |      |      |      |        |  |       |      |       |       |       |       |       |
-			                           |      |      |      |        |  |       |      |       |       |
+			                           |      |  GUI |      |        |  |       |      |  GUI   |       |
            */
 			bindings = <
 			    &kp C_BRI_DN &kp C_BRI_UP &trans  &trans  &trans  &trans             &trans  &trans  &kp K_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp K_LOCK
 			    &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 			    &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 			    &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-										&trans  &trans  &trans    &trans   &trans    &trans  &trans  &trans
+										&trans  &kp LGUI  &trans  &trans   &trans    &trans  &kp RGUI  &trans
 			>;
 		};
 	};
