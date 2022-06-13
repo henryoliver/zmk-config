@@ -35,16 +35,16 @@
 		// Raise Layer
 		raise_layer {
             /*
-			   |      |      |      |      |      |      |                   |      |       |      |      |      |      |
+			   |      |      |      |     |      |      |                   |     |       |      |      |      |      |
 			   |       |       |       |      |      |      |                   |      |       |       |       |       |       |
 			   |       |       |       |      |      |      |                   |     |      |      |      |       |       |
 			   |       |       |       |      |      |      |        |  |       |      |       |       |       |       |       |
 			                           |      |  GUI |      |        |  |       |      |  GUI   |       |
            */
 			bindings = <
-			    &kp C_BRI_DN &kp C_BRI_UP &trans  &trans  &trans  &trans             &trans  &trans  &kp K_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp K_LOCK
+			    &kp C_BRI_DN &kp C_BRI_UP &trans &kp PRINTSCREEN &trans  &trans      &kp PAUSE_BREAK &trans  &kp K_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp K_POWER
 			    &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-			    &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+			    &trans  &trans  &trans  &trans  &trans  &trans                       &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &trans  &trans
 			    &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
 										&trans  &kp LGUI  &trans  &trans   &trans    &trans  &kp RGUI  &trans
 			>;
