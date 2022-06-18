@@ -17,11 +17,18 @@
 		// Default Layer
 		default_layer {
             /*
-                |   ESC  |   1  |   2  |   3   |   4   |   5   |                    |   6   |   7    |   8    |   9   |    0   |    `   |
-                |   TAB  |   Q  |   W  |   E   |   R   |   T   |                    |   Y   |   U    |   I    |   O   |    P   |    -   |
-                |   CTRL |   A  |   S  |   D   |   F   |   G   |                    |   H   |   J    |   K    |   L   |    ;   |    '   |
-                |   SHIFT|   Z  |   X  |   C   |   V   |   B   |   "["  |   |  "]"  |   N   |   M    |   ,    |   .   |    /   |  SHIFT |
-                                       |  ALT  |  GUI  | RAISE/SPACE | BSPC | ENTER |  SPACE/RAISE |  GUI   |  ALT  |
+				,-----------------------------------------.                    ,-----------------------------------------.
+				| ESC  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  `   |
+				|------+------+------+------+------+------|                    |------+------+------+------+------+------|
+				| Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
+				|------+------+------+------+------+------|                    |------+------+------+------+------+------|
+				|LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+				|------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
+				|LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  | RSHFT|
+				`-----------------------------------------/       /     \      \-----------------------------------------'
+								  | LAlt | LGUI |RAISE | /BackSP /       \BackSP\  |RAISE |RGUI | RAlt |
+								  |      |      |Space |/       /         \      \ |Space |     |      |
+								  `----------------------------'           '------''--------------------'
             */
 			bindings = <
 				&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                                   &kp N6  &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
@@ -35,18 +42,25 @@
 		// Raise Layer
 		raise_layer {
             /*
-			   |      |      |      |     |      |      |                   |     |       |      |      |      |      |
-			   |       |       |       |      |      |      |                   |      |       |       |       |       |       |
-			   |       |       |       |      |      |      |                   |     |      |      |      |       |       |
-			   |       |       |       |      |      |      |        |  |       |      |       |       |       |       |       |
-			                           |      |  GUI |      |        |  |       |      |  GUI   |       |
+				,-----------------------------------------.                    ,-----------------------------------------.
+				|      |     |     |     |     |      |                    |     |      |     |     |     |     |
+				|------+------+------+------+------+------|                    |------+------+------+------+------+------|
+				|      |      |      |      |      |      |                    |      |      |      |      |      |  =   |
+				|------+------+------+------+------+------|                    |------+------+------+------+------+------|
+				|      |      |      |      |      |      |-------.    ,-------|     |     |     |     |      |      |
+				|------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
+				|LShift|      |      |      |      |      |-------|    |-------|      |      |      |      |   \  | RSHFT|
+				`-----------------------------------------/       /     \      \-----------------------------------------'
+								  |      | LGUI |      | /       /       \      \  |      |RGUI  |      |
+								  |      |      |      |/       /         \      \ |      |      |      |
+								  `----------------------------'           '------''--------------------'
            */
 			bindings = <
-			    &kp C_BRI_DN &kp C_BRI_UP &trans &kp PRINTSCREEN &trans  &trans      &kp PAUSE_BREAK &trans  &kp K_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp K_POWER
-			    &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+			    &trans  &kp C_BRI_DN &kp C_BRI_UP &kp PRINTSCREEN &trans  &trans     &kp PAUSE_BREAK &trans  &kp K_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp K_POWER
+			    &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &kp EQUAL
 			    &trans  &trans  &trans  &trans  &trans  &trans                       &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &trans  &trans
-			    &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-										&trans  &kp LGUI  &trans  &trans   &trans    &trans  &kp RGUI  &trans
+			    &kp LSHFT &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans  &kp BACKSLASH &kp RSHFT
+										&trans  &kp LGUI  &trans   &trans   &trans   &trans  &kp RGUI  &trans
 			>;
 		};
 	};
